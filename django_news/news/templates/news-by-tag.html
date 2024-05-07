@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django News</title>
+    <link rel="stylesheet" href="{% static 'all_news/css/news-by-tag.css' %}">
+</head>
+<body>
+    <header class="header text">
+        News
+        |
+        <div class="header__tag__input">
+            Tags
+            <input type="text" title="Separate the tags using commas" class="tag__search__input">
+            <button class="tag__search__submit">Search</button>
+        </div>
+    </header>
+    <section class="news">
+        <div class="news__list">
+        </div>
+    </section>
+
+    <!-- template for news -->
+    <a href="#" style="display:none;" class="news__list-item" id="news__template">
+        <div class="news__list-item__header text"></div>
+        <div class="news__list-item__image">
+            <img src="{% static 'common/camera.jpg' %}" alt="">
+        </div>
+        <div class="news__list-item__text text"></div>
+        <div class="news__list-item__footer">
+            <div class="news__list-item__taglist">
+            </div>
+        </div>
+    </a>
+
+    <script src="{% static 'common/jquery.min.js' %}"></script>
+    <script src="{% static 'common/get_csrf.js' %}"></script>
+    <script src="{% static 'all_news/js/news-by-tag.js' %}"></script>
+</body>
+</html>
