@@ -25,3 +25,14 @@ py manage.py createsuperuser
 
 ### Запуск
 Для запуска нужно выполнить команду `py manage.py runserver`
+
+## API
+Если вы перейдёте по пути /api, то вы увидите обзор API (ApiOverview)
+
+Касательно тех API запросов, которые требовались, чтобы были реализованы:
+ * /create - POST метод для создания новостей. В теле нужно отправлять следующие данные:<br>
+   &emsp;"header": header - заголовок новости<br>
+   &emsp;"text": text - текст новости<br>
+   &emsp;"tags": tags - тэги новости (пример: "tags": "nature, animals")<br>
+   &emsp;"image": image - картинка новости (файл, не ссылка)<br>
+ *
